@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MunchMap | Pedidos</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5e7ff;
+        }
+        .hero {
+            background: linear-gradient(135deg, #d500f9, #7b1fa2);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .card img {
+            height: 180px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #4a148c;
+            color: white;
+            padding: 25px 0;
+        }
+        .carrusel-img-fija {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        #carrito-sidebar {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MunchMap</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+
+                <!-- Botón Carrito -->
+                <li class="nav-item">
+                    <button class="btn btn-warning ms-3" data-bs-toggle="offcanvas" data-bs-target="#carrito-sidebar">
+                        🛒 Carrito <span id="contadorCarrito" class="badge bg-danger">0</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CARRUSEL -->
+<div id="carruselGrupal" class="carousel slide my-4" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carruselGrupal" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carruselGrupal" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carruselGrupal" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active" data-bs-interval="3000">
+      <div class="row">
+        <div class="col-4"><img src="imagenes/panvaso.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+        <div class="col-4"><img src="imagenes/quesabirria.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+        <div class="col-4"><img src="imagenes/pozole.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="3000">
+      <div class="row">
+        <div class="col-4"><img src="imagenes/chilaquiles.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+        <div class="col-4"><img src="imagenes/chile.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+        <div class="col-4"><img src="imagenes/cochinita.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="3000">
+      <div class="row">
+        <div class="col-4"><img src="imagenes/dorados.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+        <div class="col-4"><img src="imagenes/flauta.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+        <div class="col-4"><img src="imagenes/guisados.jpeg" class="d-block w-100 carrusel-img-fija"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carruselGrupal" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carruselGrupal" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1 class="display-5 fw-bold">Pedidos Populares</h1>
+    <p>Explora los platillos más pedidos por los usuarios en nuestras fonditas y restaurantes locales.</p>
+</section>
+
+<!-- GALERÍA -->
+<div class="container my-5">
+    <h2 class="mb-4">Galería de Pedidos</h2>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <img src="imagenes/Pedidos 1.jpg" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <img src="imagenes/Pedidos 2.jpg" class="img-fluid rounded shadow">
+        </div>
+    </div>
+
+   <!-- VIDEO DE YOUTUBE (FUNCIONAL) -->
+    <div class="row mt-4 justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="ratio ratio-16x9 shadow-custom rounded">
+                <iframe 
+                    src="https://www.youtube.com/embed/g2F5RO6vNSs"
+                    title="Video de comida mexicana"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <p class="mt-3">
+        Ver más en nuestro <a href="https://instagram.com" target="_blank">Instagram</a>.
+    </p>
+</div>
+
+<!-- PLATILLOS -->
+<div class="container my-5">
+    <h2 class="mb-4">Platillos Más Vendidos</h2>
+
+    <div class="row g-4">
+
+        <!-- PLATILLOS ORIGINALES -->
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Pedidos 1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Tacos de Pastor</h5>
+                    <p class="card-text">$45 – Taquería El Camino</p>
+                    <button class="btn btn-primary w-100 agregarCarrito" 
+                            data-nombre="Tacos de Pastor" data-precio="45">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Pedidos 2.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza Margarita</h5>
+                    <p class="card-text">$95 – La Forneta</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Pizza Margarita" data-precio="95">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NUEVOS PLATILLOS MEXICANOS -->
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/tinga.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Tostadas de Tinga</h5>
+                    <p class="card-text">$55 – Cocina Lupita</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Tostadas de Tinga" data-precio="55">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Enchiladas Verdes.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Enchiladas Verdes</h5>
+                    <p class="card-text">$70 – Antojitos Mary</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Enchiladas Verdes" data-precio="70">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Tamales Oaxaqueños.avif" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Tamales Oaxaqueños</h5>
+                    <p class="card-text">$30 – La Tamalería</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Tamales Oaxaqueños" data-precio="30">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Gorditas de Chicharrón.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Gorditas de Chicharrón</h5>
+                    <p class="card-text">$40 – Las Gorditas Doña Tere</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Gorditas de Chicharrón" data-precio="40">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Tlayuda Oaxaqueña.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Tlayuda Oaxaqueña</h5>
+                    <p class="card-text">$95 – Oaxaca en tu Mesa</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Tlayuda Oaxaqueña" data-precio="95">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Pozole Rojo.webp" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Pozole Rojo</h5>
+                    <p class="card-text">$80 – La Pozolería</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Pozole Rojo" data-precio="80">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Sopes de Asada.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Sopes de Asada</h5>
+                    <p class="card-text">$48 – Sopes Express</p>
+                    <button class="btn btn-primary w-100 agregarCarrito"
+                            data-nombre="Sopes de Asada" data-precio="48">Agregar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MAPA DE RESTAURANTES EN CDMX (IFRAME) -->
+<div class="container my-5">
+    <h2 class="mb-4 text-center">Restaurantes Cercanos en CDMX</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <iframe 
+                src="https://www.google.com/maps?q=restaurantes+cdmx&output=embed"
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: 15px;" 
+                allowfullscreen 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<!-- SIDEBAR DEL CARRITO -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="carrito-sidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">🛒 Tu Carrito</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+      <ul id="listaCarrito" class="list-group mb-3"></ul>
+
+      <h5>Total: $<span id="totalCarrito">0</span> MXN</h5>
+
+      <button id="finalizarPedido" class="btn btn-success w-100 mt-3">Finalizar Pedido</button>
+
+      <!-- ALERTA DE PEDIDO EXITOSO -->
+      <div id="alertaExito" class="alert alert-success mt-3 d-none">
+        🎉 ¡Tu pedido fue realizado con éxito!
+      </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+    <p class="mb-1">MunchMap — Food Spots en CDMX</p>
+    <p>Contacto: info@munchmap.com</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+let carrito = [];
+
+function actualizarCarritoHTML(limpiarTotal = true) {
+    const lista = document.getElementById("listaCarrito");
+    const totalHTML = document.getElementById("totalCarrito");
+    const contador = document.getElementById("contadorCarrito");
+
+    lista.innerHTML = "";
+    let total = 0;
+    let cantidadProductos = 0;
+
+    carrito.forEach((item, index) => {
+        total += item.precio * item.cantidad;
+        cantidadProductos += item.cantidad;
+
+        lista.innerHTML += `
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <strong>${item.nombre}</strong><br>
+                $${item.precio} c/u
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${index})">✖</button>
+
+                <button class="btn btn-sm btn-secondary" onclick="cambiarCantidad(${index}, -1)">−</button>
+                <span>${item.cantidad}</span>
+                <button class="btn btn-sm btn-secondary" onclick="cambiarCantidad(${index}, 1)">+</button>
+
+            </div>
+        </li>`;
+    });
+
+    if (limpiarTotal) {
+        totalHTML.innerText = total;
+    }
+
+    contador.innerText = cantidadProductos;
+}
+
+function cambiarCantidad(index, cambio) {
+    carrito[index].cantidad += cambio;
+
+    if (carrito[index].cantidad <= 0) {
+        carrito.splice(index, 1);
+    }
+
+    actualizarCarritoHTML();
+}
+
+function eliminarProducto(index) {
+    carrito.splice(index, 1);
+    actualizarCarritoHTML();
+}
+
+document.querySelectorAll(".agregarCarrito").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const nombre = btn.dataset.nombre;
+        const precio = parseFloat(btn.dataset.precio);
+
+        const existe = carrito.find(p => p.nombre === nombre);
+
+        if (existe) {
+            existe.cantidad++;
+        } else {
+            carrito.push({ nombre, precio, cantidad: 1 });
+        }
+
+        actualizarCarritoHTML();
+    });
+});
+
+
+// 🚀 FINALIZAR PEDIDO
+document.getElementById("finalizarPedido").addEventListener("click", () => {
+    if (carrito.length === 0) return;
+
+    // 1️⃣ Calcular total con cantidad correcta
+    const total = carrito.reduce(
+        (suma, producto) => suma + producto.precio * producto.cantidad,
+        0
+    );
+
+    // 2️⃣ Mostrar total en la alerta
+    const alerta = document.getElementById("alertaExito");
+    alerta.textContent = `¡Pedido realizado con éxito! Total: $${total} pesos`;
+    alerta.classList.remove("d-none");
+
+    // 3️⃣ Vaciar carrito sin borrar el total mostrado
+    carrito = [];
+    actualizarCarritoHTML(false); // NO borra el total final
+
+    // 4️⃣ Ocultar mensaje
+    setTimeout(() => {
+        alerta.classList.add("d-none");
+    }, 3000);
+});
+</script>

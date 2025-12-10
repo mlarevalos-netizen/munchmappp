@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MunchMap</title>
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: white !important;
+      border-bottom: 1px solid #eaeaea;
+      padding: 0.8rem 0;
+    }
+    .navbar-nav .nav-link {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #555 !important;
+    }
+    .navbar-nav .nav-link:hover {
+      color: black !important;
+    }
+
+    /* HERO */
+    .hero {
+      background: #efefef;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 { font-size: 3rem; font-weight: 800; }
+    .hero p { font-size: 1.2rem; color: #555; }
+
+    /* Secciones */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+    .section-text {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    /* Carrusel Comida */
+    #carouselComida .carousel-item img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Galería */
+    .gallery-img {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    /* Cards */
+    .rest-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.2s;
+    }
+    .rest-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+    .rest-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .btn-reserva {
+      background: black;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-reserva:hover { background: #333; color: #fff; }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      padding: 40px;
+      background: white;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 576px) {
+      .hero h1 { font-size: 2rem; }
+      .section-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">MunchMap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <h1>Descubre Comida Local en la CDMX</h1>
+  <p>Encuentra joyas culinarias escondidas</p>
+</section>
+
+<!-- SOBRE -->
+<section class="container my-4">
+  <h2 class="section-title">Sobre el Proyecto</h2>
+  <p class="section-text">
+    Este sitio busca mostrar lugares interesantes para comer en mi zona, destacando aquellos que suelen pasar desapercibidos.
+  </p>
+</section>
+
+<!-- GALERÍA -->
+<section class="container my-5 text-center">
+  <h2 class="section-title">Galería</h2>
+  <img src="imagenes/galeria.webp" class="gallery-img mb-3" alt="Galería">
+  <p class="section-text">Sígueme en Instagram para más recomendaciones.</p>
+</section>
+
+<!-- EXPLORA MÁS -->
+<section class="container my-5" id="explora">
+  <h2 class="section-title">Explora Más</h2>
+
+  <div id="carouselComida" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="imagenes/pozole.jpeg" alt="Pozole">
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/flauta.jpeg" alt="Flauta">
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/quesabirria.jpeg" alt="Quesabirria">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselComida" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselComida" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+<!-- PROMOCIONES -->
+<section class="container my-5" id="promociones">
+  <h2 class="section-title">Promociones</h2>
+
+  <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="row align-items-center p-4">
+          <div class="col-md-6 text-center text-md-start">
+            <span style="font-size:2rem;">🌮🔥</span>
+            <h4 class="fw-bold mt-2">2x1 en Tacos</h4>
+            <p class="text-muted">Disponible los martes.</p>
+            <a href="#menu" class="btn btn-dark px-3 py-1">Ver Menú</a>
+          </div>
+          <div class="col-md-6">
+            <img src="imagenes/tacospromoo.jpg" class="w-100 rounded-4" alt="Tacos">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row align-items-center p-4">
+          <div class="col-md-6 text-center text-md-start">
+            <span style="font-size:2rem;">🌯⭐</span>
+            <h4 class="fw-bold mt-2">Combo Burrito $89</h4>
+            <p class="text-muted">Incluye bebida.</p>
+            <a href="#menu" class="btn btn-dark px-3 py-1">Ver Menú</a>
+          </div>
+          <div class="col-md-6">
+            <img src="imagenes/burrito.jpeg" class="w-100 rounded-4" alt="Burrito">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row align-items-center p-4">
+          <div class="col-md-6 text-center text-md-start">
+            <span style="font-size:2rem;">🫔💛</span>
+            <h4 class="fw-bold mt-2">Tamales 3x2</h4>
+            <p class="text-muted">Promoción del mes.</p>
+            <a href="#menu" class="btn btn-dark px-3 py-1">Ver Menú</a>
+          </div>
+          <div class="col-md-6">
+            <img src="imagenes/tamales.jpeg" class="w-100 rounded-4" alt="Tamales">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselPromos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+<!-- TOP RESTAURANTES -->
+<section class="container my-5">
+  <h2 class="section-title">Top Restaurantes</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="rest-card">
+        <img src="imagenes/variedad.jpeg" class="rest-img" alt="Taquería El Buen Sabor">
+        <h4 class="fw-bold">Taquería El Buen Sabor</h4>
+        <p class="fw-bold">⭐⭐⭐⭐⭐</p>
+        <a href="#reservas" class="btn-reserva" onclick="seleccionarRestaurante('Taquería El Buen Sabor')">Reservar aquí</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="rest-card">
+        <img src="imagenes/chiles.jpeg" class="rest-img" alt="Casa del Chile Rojo">
+        <h4 class="fw-bold">Casa del Chile Rojo</h4>
+        <p class="fw-bold">⭐⭐⭐⭐</p>
+        <a href="#reservas" class="btn-reserva" onclick="seleccionarRestaurante('Casa del Chile Rojo')">Reservar aquí</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="rest-card">
+        <img src="imagenes/guacamole.jpeg" class="rest-img" alt="La Cabaña del Aguacate">
+        <h4 class="fw-bold">La Cabaña del Aguacate</h4>
+        <p class="fw-bold">⭐⭐⭐⭐⭐</p>
+        <a href="#reservas" class="btn-reserva" onclick="seleccionarRestaurante('La Cabaña del Aguacate')">Reservar aquí</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESERVACIONES -->
+<section class="container my-5" id="reservas">
+  <h2 class="section-title">Reservaciones</h2>
+  <p class="section-text mb-4">Completa los datos para reservar en tu restaurante seleccionado.</p>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <form id="formReserva" class="p-4 bg-white shadow rounded">
+
+        <div class="mb-3">
+          <label class="form-label">Restaurante</label>
+          <input type="text" id="restSeleccionado" class="form-control" readonly>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Nombre completo</label>
+          <input type="text" id="nombreReserva" class="form-control" required placeholder="Tu nombre">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Fecha</label>
+          <input type="date" id="fechaReserva" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Hora</label>
+          <input type="time" id="horaReserva" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Número de personas</label>
+          <input type="number" id="personasReserva" class="form-control" min="1" max="12" required>
+        </div>
+
+        <button type="submit" class="btn btn-dark w-100">Confirmar Reserva</button>
+
+      </form>
+
+      <div id="msgReserva" class="mt-3" style="display:none;"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>munchmap@ejemplo.com | 55-1234-5678</p>
+  <p>CDMX, México</p>
+  <p>©️ 2025 MunchMap</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SINCRONIZACIÓN DE CARRUSELES Y LÓGICA DE RESERVAS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const comida = document.getElementById("carouselComida");
+  const promos = document.getElementById("carouselPromos");
+
+  if (comida && promos) {
+    const c1 = new bootstrap.Carousel(comida);
+    const c2 = new bootstrap.Carousel(promos);
+
+    comida.addEventListener("slide.bs.carousel", function (e) {
+      if (e.direction === "left") { c2.next(); }
+      else { c2.prev(); }
+    });
+
+    promos.addEventListener("slide.bs.carousel", function (e) {
+      if (e.direction === "left") { c1.next(); }
+      else { c1.prev(); }
+    });
+  }
+
+  // Capturar envíos de reserva (ejemplo: solo muestra mensaje y limpia formulario)
+  const form = document.getElementById('formReserva');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombreReserva').value;
+      const rest = document.getElementById('restSeleccionado').value;
+      const fecha = document.getElementById('fechaReserva').value;
+      const hora = document.getElementById('horaReserva').value;
+      const personas = document.getElementById('personasReserva').value;
+
+      // Aquí podrías enviar los datos a un servidor o a Google Sheets.
+      // Por ahora mostramos un mensaje de confirmación.
+      const msg = document.getElementById('msgReserva');
+      msg.style.display = 'block';
+      msg.className = 'alert alert-success';
+      msg.innerHTML = `<strong>¡Reserva confirmada!</strong><br> ${nombre}, tu reserva en <strong>${rest}</strong> para ${personas} persona(s) el ${fecha} a las ${hora} ha sido registrada.`;
+
+      form.reset();
+      // Mantener campo restaurante vacío hasta nueva selección
+      document.getElementById('restSeleccionado').value = '';
+
+      // Hacer scroll suave hacia el mensaje
+      msg.scrollIntoView({behavior: 'smooth', block: 'center'});
+    });
+  }
+
+});
+
+// Función para llenar el campo restaurante y hacer scroll
+function seleccionarRestaurante(nombre) {
+  const input = document.getElementById('restSeleccionado');
+  if (input) input.value = nombre;
+  // scroll suave
+  const seccion = document.getElementById('reservas');
+  if (seccion) seccion.scrollIntoView({behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MunchMap</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .hero {
+            background-color: #ff7043;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .card img {
+            height: 180px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #2f4f4f;
+            color: white;
+            padding: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MunchMap</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+               <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+               <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+               <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1 class="display-4 fw-bold">Encuentra comida casera y deliciosa en CDMX</h1>
+    <p>Descubre fonditas, comedores tradicionales y puestos callejeros con el mejor sabor y precio.</p>
+</section>
+
+<!-- MENÚS -->
+<div class="container my-5">
+    <h2 class="mb-3">Menús de Restaurantes</h2>
+    <p>Busca aquí los mejores restaurantes y realiza pedidos directamente dentro de la página.</p>
+
+    <!-- Cards de productos -->
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Menu Fonda Marce.jpeg" class="card-img-top" alt="Platillo">
+                <div class="card-body">
+                    <h5 class="card-title">Fonda Marce</h5>
+                    <p class="card-text">Comida casera tradicional.</p>
+                    <a href="#" class="btn btn-primary w-100">Ver menú</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="imagenes/Los Quelites.jpeg" class="card-img-top" alt="Platillo">
+                <div class="card-body">
+                    <h5 class="card-title">Los Quelites</h5>
+                    <p class="card-text">Cocina mexicana auténtica.</p>
+                    <a href="#" class="btn btn-primary w-100">Ver menú</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Puedes duplicar estas cards si lo necesitas -->
+    </div>
+</div>
+
+<!-- GALERÍA -->
+<div class="container my-5">
+    <h2 class="mb-3">Galería</h2>
+
+    <div class="row g-3">
+        <div class="col-md-6"><img src="imagenes/Menu Fonda Marce.jpeg" class="img-fluid rounded shadow"></div>
+        <div class="col-md-6"><img src="imagenes/Fonda Marce.jpeg" class="img-fluid rounded shadow"></div>
+        <div class="col-md-6"><img src="imagenes/Menu los quelites.jpeg" class="img-fluid rounded shadow"></div>
+        <div class="col-md-6"><img src="imagenes/Los Quelites.jpeg" class="img-fluid rounded shadow"></div>
+    </div>
+
+    <p class="mt-3">
+        Visita este restaurante en <a href="https://www.instagram.com/flosquelites" target="_blank">Instagram</a>. <br>
+        Visita Fonda Marce en <a href="https://www.instagram.com/fondamarce" target="_blank">Instagram</a>.
+    </p>
+</div>
+
+<!-- TOP RESTAURANTES -->
+<div class="container my-5">
+    <h2>Top Restaurantes</h2>
+    <ol>
+        <li>Órale Milanga — Av. Horacio 256, Polanco</li>
+        <li>Chingu — Av. Sonora 46, Roma Norte</li>
+        <li>Café La Cel — San Luis Potosí 121, Roma Norte</li>
+        <li>Coyota — Jardín Mascarones, Santa María La Ribera</li>
+        <li>Pazzesca — Marsella 86, Juárez</li>
+    </ol>
+</div>
+
+<!-- TABLA -->
+<div class="container my-5">
+    <h2>Precios de Platillos</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Platillo</th>
+                    <th>Restaurante</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Tacos de Pastor</td><td>Taquería El Camino</td><td>$45</td></tr>
+                <tr><td>Hamburguesa Clásica</td><td>Burger Spot</td><td>$120</td></tr>
+                <tr><td>Pizza Margarita</td><td>La Forneta</td><td>$95</td></tr>
+                <tr><td>Sushi Roll</td><td>Sakura</td><td>$140</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- SELECT -->
+<div class="container my-5">
+    <select class="form-select">
+        <option selected>Selecciona un menú de tu preferencia</option>
+        <option value="1">Órale Milanga</option>
+        <option value="2">Café La Cel</option>
+        <option value="3">Coyota</option>
+    </select>
+</div>
+
+<!-- TESTIMONIOS -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Testimonios</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="p-3 bg-white shadow rounded">
+                <p>"Encontré la mejor fondita de mi vida gracias a MunchMap."</p>
+                <h6>- Daniela, 23 años</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-3 bg-white shadow rounded">
+                <p>"Comida rica, barata y cerca de mi trabajo. 10/10."</p>
+                <h6>- Luis, 31 años</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-3 bg-white shadow rounded">
+                <p>"Me encanta descubrir lugares caseros en la CDMX."</p>
+                <h6>- Mariana, 29 años</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container text-center">
+        <p class="mb-1">MunchMap — Encuentra comida local y deliciosa.</p>
+        <p>Contacto: info@munchmap.com | CDMX</p>
+    </div>
+</footer>
+
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

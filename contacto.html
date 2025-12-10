@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MunchMap - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f3fff3;
+        }
+        .hero-title {
+            color: #228b22;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        .section-title {
+            color: #5c7a1f;
+            font-weight: 600;
+        }
+        footer{
+            background: #228b22;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="#">MunchMap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="text-center py-5">
+    <h1 class="hero-title">MunchMap</h1>
+    <p class="lead">Descubre lugares acogedores, deliciosos y a buen precio en la CDMX.</p>
+</section>
+
+<!-- DESCRIPCIÓN -->
+<div class="container mb-5">
+    <h2 class="section-title mb-3">Contáctanos</h2>
+    <p>Déjanos tus comentarios o quejas sobre restaurantes; nosotros los haremos llegar a donde corresponda.</p>
+</div>
+
+<!-- GALERÍA -->
+<section class="container mb-5" id="galeria">
+    <h3 class="section-title mb-3">Galería</h3>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <img src="imagenes/Telefono 1 2.0.jpg" class="img-fluid rounded shadow" alt="Ejemplo 1" />
+        </div>
+        <div class="col-md-6">
+            <img src="imagenes/Telefono 2.avif" class="img-fluid rounded shadow" alt="Ejemplo 2" />
+        </div>
+    </div>
+</section>
+
+<p class="text-center mb-5">Síguenos para más recomendaciones en <a href="https://instagram.com" target="_blank">Instagram</a>.</p>
+
+<!-- BUZÓN DE QUEJAS -->
+<section class="container mb-5" id="buzon">
+    <h2 class="section-title mb-3">Buzón de Quejas</h2>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Nombre y Correo</span>
+        <input type="text" aria-label="Nombre Completo" placeholder="Nombre completo" class="form-control" id="nombreQueja">
+        <input type="email" aria-label="Email" placeholder="Correo electrónico" class="form-control" id="correoQueja">
+    </div>
+
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Escribe aquí tu comentario" id="floatingTextarea2" style="height: 120px"></textarea>
+      <label for="floatingTextarea2">Déjanos saber tu opinión</label>
+    </div>
+
+    <button type="button" class="btn btn-success px-4" id="enviarComentario">Enviar Comentario</button>
+
+    <!-- 📌 Mensaje agregado -->
+    <div id="mensajeEnviado" class="alert alert-success d-none mt-3">
+        Muchas gracias por enviar tu comentario, nuestro equipo se encargará de revisarlo.
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white text-center py-3">
+    <p class="mb-0">MunchMap ©️ 2025 | contacto@munchmap.com</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 📌 Script para mostrar mensaje -->
+<script>
+document.getElementById("enviarComentario").addEventListener("click", () => {
+
+    const mensaje = document.getElementById("mensajeEnviado");
+    mensaje.classList.remove("d-none");  // Mostrar mensaje
+
+    // Ocultar automáticamente después de 4 segundos
+    setTimeout(() => {
+        mensaje.classList.add("d-none");
+    }, 4000);
+});
+</script>
+
+</body>
+</html>
